@@ -47,8 +47,11 @@
         var data = google.visualization.arrayToDataTable([
 
           ['State', 'Number of projects'],
-          ['US-CA', 1000],
-          ['US-WA', 500]
+          ['US-MT', 200],
+          ['US-WA', 500],
+          ['CA-AB',300],
+          ['CA-BC',400],
+          ['CA-ON',100]
 
 
         ]);
@@ -70,8 +73,37 @@
 
         //chart.draw(data, options);
       }
-      
-      
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'Number of projects'],
+          ['US-MT', 200],
+          ['US-WA', 500],
+          ['CA-AB',300],
+          ['CA-BC',400],
+          ['CA-ON',100]
+
+
+        ]);
+
+        var options = {     };
+        options['region'] = 'US';
+        options['resolution']='provinces';
+        options['colors'] = ['blue'];
+   
+     
+
+
+        var chart1 = new google.visualization.GeoChart(document.getElementById('regions_div1'));
+
+        chart1.draw(data, options);
+        options['region'] = 'CA';
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div2'));
+
+        chart.draw(data, options);
+      }
 
     </script>
         <link rel="stylesheet" href="assets/css/custom.css">
@@ -96,21 +128,6 @@
                                     </li>                                     
                                     <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
                                         <a href="#about" class="nav-link p-0">About</a> 
-                                    </li>
-                                    <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
-                                        <a href="geotechnical.html" class="nav-link p-0">Geotechnical</a> 
-                                    </li>
-                                    <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
-                                        <a href="vibration.html" class="nav-link p-0">Vibration</a> 
-                                    </li>
-                                    <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
-                                        <a href="photosurveys.html" class="nav-link p-0">Photo Surveys</a> 
-                                    </li>
-                                    <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
-                                        <a href="acoustichydrophone.html" class="nav-link p-0">Acoustic/Hydrophone</a> 
-                                    </li>
-                                    <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
-                                        <a href="#projects_showcase" class="nav-link p-0">Showcase</a> 
                                     </li>                                     
                                     <li class="nav-item g-mx-8--lg g-mb-7 g-mb-0--lg"> 
                                         <a href="#careers" class="nav-link p-0">Careers</a> 
@@ -148,7 +165,7 @@
                     <img class="ms-layer" src="assets/img/blank.gif" data-src="assets/img/slider/slide2.jpg" alt="" style="" data-effect="t(false,850,n,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="30000" data-ease="linear" data-parallax="6" data-type="image" data-offset-x="-350" data-offset-y="0" data-origin="mc" data-position="normal"/>
                     <div class="ms-layer msp-cn-140-31" style="" data-effect="t(true,n,20,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="3000" data-delay="400" data-ease="easeOutQuint" data-parallax="60" data-offset-x="122" data-offset-y="-125" data-origin="ml" data-position="normal" data-masked="true">24/7
 </div>
-                    <div class="ms-layer msp-cn-140-33" style="" data-effect="t(true,n,50,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="7000" data-delay="1600" data-ease="easeOutQuint" data-parallax="100" data-offset-x="120" data-offset-y="-73" data-origin="ml" data-position="normal" data-masked="true">Dependable
+                    <div class="ms-layer msp-cn-140-33" style="" data-effect="t(true,n,50,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="7000" data-delay="1600" data-ease="easeOutQuint" data-parallax="100" data-offset-x="120" data-offset-y="-73" data-origin="ml" data-position="normal" data-masked="true">All-weather
 </div>
                     <div class="ms-layer msp-cn-140-31" style="" data-effect="t(true,n,50,n,n,n,n,n,n,n,n,n,n,n,n)" data-duration="7000" data-delay="2600" data-ease="easeOutQuint" data-parallax="120" data-offset-x="120" data-offset-y="-7" data-origin="ml" data-position="normal" data-masked="true">Monitoring
 </div>
@@ -173,9 +190,13 @@
                 <div class="container"> 
                     <div class="row"> 
                         <div class="col-md-5 g-mb-30 g-mb-0--md"> 
-                            <img class="img-fluid g-mb-30" src="img/servingsince/servingsince_small.JPG" alt="Image description">
+                            <img class="img-fluid g-mb-30" src="img/servingsince/servingsince_small.JPG" alt="Image description"> 
+                            <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-black g-mb-10">servicing YOU since 1985</h3> 
+                            <p class="mb-0">16000+ Projects under our belt</p> 
+                            <p class="mb-0">Serving Vancouver, Calgary, Kamloops and Squamish</p> 
+                            <p class="mb-0">All your services done in-house</p> 
                         </div>                         
-                        <div class="col-md-7">
+                        <div class="col-md-7"> 
                             <div id="aboutAccordion" role="tablist" aria-multiselectable="true"> 
                                 <div class="card g-brd-none"> 
                                     <div id="aboutAccordionHeading1" class="card-header u-accordion__header g-bg-transparent g-brd-none rounded-0 p-0" role="tab"> 
@@ -183,9 +204,7 @@
                                     </div>                                     
                                     <div id="aboutAccordionBody1" class="collapse show" role="tabpanel" aria-labelledby="aboutAccordionHeading1"> 
                                         <div class="card-block u-accordion__body g-py-20 px-0"> 
-                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0"><br></p>
-                                            <p><p>Municon provides geotechnical instrumentation services for monitoring excavations and structures appurtenant to heavy construction operations such as highways, bridges, dams, tunnels, deep excavations and underpinning works. Equipment includes piezometers, settlement platforms, tiltmeters, beam sensors and inclinometers, operated via Campbell and Geokon dataloggers and with remote access for periodic reporting and/or website data display. Municon owns most of its instruments and fabricates its own hydraulic settlement platforms. <br><br>Municon is the largest purveyor of vibration monitoring services for heavy construction on the West Coast with over 100 general purpose construction monitoring seismographs and accelerometers and related technical equipment. It provides vibration monitoring services and consultation in connection with blasting, pile driving, deep dynamic compaction, stone column compaction, pipe bursting, demolition and general construction. Municon provides vibration attenuation surveys. All seismographs are equipped for remote reading with cellular phones and can be equipped with solar panels for efficient and economical monitoring.&nbsp;<br></p></p>
-                                            <p></p> 
+                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0"><b>We specialize in creative and cost effective geotechnical solutions.</b><br/>Our engineering services include geotechnical site investigations, seismic site classification, excavation and shoring design, foundations, hydrogeology, earth structures, hazard assessments, and construction monitoring.     <br/>We provide technical services including: Materials testing of soils, aggregate, and asphalt, geophysical surveys and utility location, and Erosion and Sediment Control (ESC) design and monitoring.</p> 
                                         </div>                                         
                                     </div>                                     
                                 </div>                                 
@@ -195,10 +214,8 @@
                       Our history <span class="u-accordion__control-icon g-absolute-centered--y g-right-0 g-color-primary"> <i class="fa fa-arrow-right"></i> <i class="fa fa-arrow-down"></i> </span> </a> 
                                     </div>                                     
                                     <div id="aboutAccordionBody2" class="collapse" role="tabpanel" aria-labelledby="aboutAccordionHeading2"> 
-                                        <div class="card-block u-accordion__body g-py-20 px-0">
-                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0"></p>
-                                            <p>Municon West Coast, Inc., is the successor company to Municon Consultants, which was acquired in September 2018. Municon is a purveyor of geotechnical instrumentation services to contractors, engineers and owners in the heavy construction industry.<br><br>Established in 1991 Municon is located in San Francisco, positioned to continue its steady growth as the West Coast continues to expand, replace and rehabilitate facilities and infrastructure.&nbsp;</p>
-                                            <p></p>
+                                        <div class="card-block u-accordion__body g-py-20 px-0"> 
+                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0"><p>Formed in 1985, GeoPacific Consultants Ltd. is a geotechnical engineering consultancy based in Vancouver, BC. Specializing in creative and cost effective geotechnical solutions. GeoPacific has been involved in over 16,000 projects within the Lower Mainland and beyond, and now has office in Vancouver, Calgary, Kamloops, and Squamish.&nbsp;</p></p>
                                         </div>                                         
                                     </div>                                     
                                 </div>                                 
@@ -214,15 +231,120 @@
                                     </div>                                     
                                     <div id="aboutAccordionBody4" class="collapse" role="tabpanel" aria-labelledby="aboutAccordionHeading4"> 
                                         <div class="card-block u-accordion__body g-py-20 px-0"> 
-                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0">GeoPacific is always looking for bright, hardworking, and driven professionals to add to our team. If this describes you we would be happy to receive your resume and cover letter at <a href="mailto:careers@geopacific.ca ">careers@municonws.com</a>. Specific roles can be found <a href="#careers">here</a></p> 
+                                            <p class="g-font-size-default g-theme-color-gray-light-v2 mb-0">GeoPacific is always looking for bright, hardworking, and driven professionals to add to our team. If this describes you we would be happy to receive your resume and cover letter at <a href="mailto:careers@geopacific.ca ">careers@geopacific.ca</a>. Specific roles can be found <a href="#careers">here</a></p> 
                                         </div>                                         
                                     </div>                                     
                                 </div>                                 
-                            </div>
+                            </div>                             
                         </div>                         
                     </div>                     
                 </div>                 
             </section>
+            <section id="our_team" class="g-bg-img-hero  g-py-80" style="background-image: url('img/testimonials/logos_background_small.jpg');"> 
+                <div class="text-uppercase text-center u-heading-v2-4--bottom g-brd-white g-mb-60 header_white_text d-flex flex-column justify-content-center align-items-center">
+                    <h4 class="g-font-weight-700 g-font-size-12 g-color-white g-mb-15">meet our folks</h4>
+                    <a class="btn btn-lg u-btn-inset mx-2 our_team_button_font_size u-btn-facebook" href="site_invesigation.html"> <i class="fa g-color-primary mr-2 fa-handshake-o fa-2x g-color-white-opacity-0_7"></i> 
+                  OUR TEAM </a>
+                </div>
+                <div class="container u-bg-overlay__inner text-center"> 
+                    <div class="js-carousel" data-autoplay="true" data-infinite="true" data-slides-show="6" data-responsive='[{
+                 "breakpoint": 1200,
+                 "settings": {
+                   "slidesToShow": 6
+                 }
+               }, {
+                 "breakpoint": 992,
+                 "settings": {
+                   "slidesToShow": 4
+                 }
+               }, {
+                 "breakpoint": 768,
+                 "settings": {
+                   "slidesToShow": 2
+                 }
+               }, {
+                 "breakpoint": 576,
+                 "settings": {
+                   "slidesToShow": 1
+                 }
+               }]'> 
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#matt_kokan"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>MATT KOKAN</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/kevin_bodnar.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#kevin_bodnar"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>KEVIN BODNAR</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#gillian_williams"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>GILLIAN WILLIAMS</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/mohammad_deriszadeh.JPG" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#mohammad_deriszadeh"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>M. DERISZADEH</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" alt="Image description" src="img/our_team/matt_kokan.jpg">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#farshid_bateni"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Farshid Bateni</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" alt="Image description" src="img/our_team/matt_kokan.jpg">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#marian_letavay"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>M. Letavay</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/bryon_richardson.JPG" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#bryon_richardson"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>B. RICHARDSON</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#kazunori_fujita"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>K. FUJITA</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#roberto_avendano"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>R. AVENDANO</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#erin_kempin"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>ERIN KEMPIN</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#steve_hasegawa"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>STEVE HASEGAWA</a>
+                            </div>                             
+                        </div>
+                        <div class="js-slide g-mx-15"> 
+                            <div class="our_team_js_slide">
+                                <img class="mx-auto g-width-120" src="img/our_team/matt_kokan.jpg" alt="Image description">
+                                <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2 our_team_button" href="our_team.html#mehwish_rahman"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Mehwish Rahman</a>
+                            </div>                             
+                        </div>
+                    </div>                     
+                </div>                 
+            </section>
+            <section>
+</section>
             <section id="services">
                 <div class="container " style="top: 0px;
     margin-top: 64px;"> 
@@ -237,9 +359,9 @@
                             <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/site_inv_small.jpg');"> 
                                 <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/site_inv_small.jpg" alt="Image description"> 
                                 <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
-                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Geotechnical monitoring</h3> 
-                                    <p class="g-color-white-opacity-0_7 g-mb-30">Geotechnical and structural instrumentation services for monitoring the structural integrity of heavy construction works.</p> 
-                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="geotechnical.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">SITE INVESTIGATION</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We conduct site investigation for our clients to determine subsurface soil and groundwater conditions</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="site_invesigation.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i> 
                   Read more </a> 
                                 </div>                                 
                             </div>                             
@@ -248,9 +370,9 @@
                             <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/eng_services_small.jpg');"> 
                                 <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/eng_services_small.jpg" alt="Image description"> 
                                 <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
-                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Vibration monitoring</h3> 
-                                    <p class="g-color-white-opacity-0_7 g-mb-30">We provide remote Vibration Monitoring for heavy and large-scale construction</p> 
-                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="vibration.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">ENGINEERING SERVICES</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We provide engineering solutions for the development of structures in all types of ground conditions</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="eng_services.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
                                 </div>                                 
                             </div>                             
                         </div>                         
@@ -260,9 +382,9 @@
                             <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/buildings_small.jpg');"> 
                                 <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/buildings_small.jpg" alt="Image description"> 
                                 <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
-                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Photo Surveys</h3> 
-                                    <p class="g-color-white-opacity-0_7 g-mb-30">Documentation for pre-existing condition (photo and video). Recording of any existing damages prior to the commencement of new construction</p> 
-                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="photosurveys.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">FOUNDATION DESIGN</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We provide foundation design services for all building categories</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="foundation_design.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
                                 </div>                                 
                             </div>                             
                         </div>                         
@@ -270,9 +392,119 @@
                             <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/shoring_small.jpg');"> 
                                 <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/shoring_small.jpg" alt="Image description"> 
                                 <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
-                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Acoustic / Hydrophone</h3> 
-                                    <p class="g-color-white-opacity-0_7 g-mb-30">Live and long-term acoustic monitoring for by-law compliance. High dynamic range underwater monitoring capabilities.</p> 
-                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="acoustichydrophone.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Excavation and Shoring</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We specialize in the design of tie back shoring systems including shotcrete, sheet pile, soldier pile and jet grout walls</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="excavation_shoring.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row no-gutters"> 
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/infrastructure_canada_line_small.JPG');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/infrastructure_canada_line_small.JPG" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Infrastructure</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We provide services in route selection, road design, playing fields and temporary structures</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="infrastructure.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/earthstructures_small.JPG');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/earthstructures_small.JPG" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Earth Structures</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We are well versed in in many different temporary and permanent retaining wall structures</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="earth_structures.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>
+                    <div class="row no-gutters"> 
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/remote_monitoring_small.jpg');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/remote_monitoring_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Remote Monitoring</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We can monitor tilt, vibration, acoustic noise and motion to an extreme precision- helping you stay safe and within the bylaw.</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="remote_monitoring.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/technical_advice_small.jpg');">
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/technical_advice_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">TECHNICAL ADVICE</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">Help with bids and technical presentations.&nbsp;</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="technical_advice.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row no-gutters"> 
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/hazard_assesment_small.jpg');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/hazard_assesment_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">Hazard Assessment</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">Slope stability evaluations and risk assessment for land development and route selection</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="hazard_assessment.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/technical_litigation_small.jpg');">
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/technical_litigation_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">EnGINEERING Support</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">Expertise in insurance and litigation processes</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="eng_support.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row no-gutters"> 
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/materialtesting_small.JPG');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/materialtesting_small.JPG" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">MATERIALS TESTING</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We provide testing services both in the field and in-lab for soils, aggregate, and asphalt</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="materials_testing.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/erosion_sedcontrol_small.JPG');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/erosion_sedcontrol_small.JPG" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">EROSION AND SEDIMENT CONTROL</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We help mitigate the affects of construction on discharging eroded soil into our waterways</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="erosion_sediment_control.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="row no-gutters"> 
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/geophysics_utility_small.jpg');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/geophysics_utility_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">GEOPHYSICS AND UTILITY LOCATING</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We can detrmine bedrock depth, soil stratigraphy, void dimensions, and locate underground utilities</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="geophysics.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
+                                </div>                                 
+                            </div>                             
+                        </div>                         
+                        <div class="col-md-6"> 
+                            <div class="u-bg-overlay g-parent g-pos-rel g-min-height-300 g-bg-img-hero g-bg-black-opacity-0_6--after g-overflow-hidden" style="background-image: url('img/services/hydrogeology_small.jpg');"> 
+                                <img class="img-fluid g-hidden-md-down g-transform-scale-1_2--parent-hover g-transition-0_2 g-transition--ease-in" src="img/services/hydrogeology_small.jpg" alt="Image description"> 
+                                <div class="text-center u-bg-overlay__inner g-absolute-centered g-width-90x"> 
+                                    <h3 class="text-uppercase g-font-weight-700 g-font-size-18 g-color-white g-mb-20">HYDROGEOLOGY</h3> 
+                                    <p class="g-color-white-opacity-0_7 g-mb-30">We help mitigate the impacts on existing aquifers and minimize the discharge to municipal infrastructure</p> 
+                                    <a class="btn btn-lg u-btn-darkgray u-btn-inset mx-2" href="hydrogeology.html"> <i class="fa fa-arrow-right g-color-primary mr-2"></i>Read more</a> 
                                 </div>                                 
                             </div>                             
                         </div>                         
@@ -535,6 +767,9 @@
                         <h2 class="u-heading-v2__title g-line-height-1_1 g-font-weight-700 g-font-size-40 g-color-black g-mb-minus-10">project locations</h2> 
                     </div>                     
                 </div>
+                <h4 id="canada" class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-15 canada_h4_margin">CANADA</h4>
+                <div id="regions_div2" "" class="maps_style"></div>
+                <h4 id="us" class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-15 us_h4_topmargin ">US</h4>
                 <div id="regions_div1" class="maps_style"></div>
             </section>             
             <!-- Section Content -->             
@@ -546,7 +781,7 @@
                         <h4 class="g-font-weight-700 g-font-size-12 g-color-primary g-mb-15">Careers</h4> 
                         <h2 class="u-heading-v2__title g-line-height-1_1 g-font-weight-700 g-font-size-40 g-color-black g-mb-minus-10">Work with us</h2> 
                     </div>                     
-                    <p class="g-color-gray-dark-v5 mb-0">We are always interested in well qualified and enthusiastic candidates. If you are interested in working at GeoPacific please submit your resume to <a href="mailto:careers@geopacific.ca">careers@municonws.com</a>.</p> 
+                    <p class="g-color-gray-dark-v5 mb-0">We are always interested in well qualified and enthusiastic candidates. If you are interested in working at GeoPacific please submit your resume to <a href="mailto:careers@geopacific.ca">careers@geopacific.ca</a>.</p> 
                 </div>                 
                 <div class="u-bg-overlay g-bg-img-hero g-py-100 g-bg-primary-opacity-0_8--after" style="background-image: url('img/careers/drafter_small.jpg');"> 
                     <div class="container u-bg-overlay__inner"> 
@@ -594,23 +829,27 @@
                                             <div class="col-sm-6 g-brd-left g-brd-bottom g-theme-brd-gray-light-v3 g-px-15 g-py-25"> 
                                                 <i class="icon-anchor d-inline-block g-font-size-50 g-color-primary g-mb-30"></i> 
                                                 <h3 class="text-uppercase g-font-size-11 g-line-height-1 g-theme-color-gray-light-v2 mb-0">Address</h3> 
-                                                <a href="https://goo.gl/maps/F9P1GWTDba42" class="g-font-size-11"><strong>2200 Jerrold Avenue, Suite K
-San Francisco, CA 94124</strong></a> 
+                                                <a href="https://goo.gl/maps/F9P1GWTDba42" class="g-font-size-11"><strong>1779 W. 75th Avenue Vancouver, B.C., V6P 6P2</strong></a> 
                                             </div>                                             
                                             <div class="col-sm-6 g-brd-left g-brd-bottom g-theme-brd-gray-light-v3 g-px-15 g-py-25"> 
                                                 <i class="icon-call-in d-inline-block g-font-size-50 g-color-primary g-mb-30"></i> 
                                                 <h3 class="text-uppercase g-font-size-11 g-line-height-1 g-theme-color-gray-light-v2 mb-0">Phone number</h3> 
-                                                <a href="tel: +16044390922" class="g-font-size-11"><strong>(415) 641-2570</strong></a> 
+                                                <a href="tel: +16044390922" class="g-font-size-11"><strong>604-439-0922</strong></a> 
                                             </div>                                             
                                             <div class="col-sm-6 g-brd-left g-brd-bottom g-theme-brd-gray-light-v3 g-px-15 g-py-25"> 
                                                 <i class="icon-line icon-envelope-letter d-inline-block g-font-size-50 g-color-primary g-mb-30"></i> 
                                                 <h3 class="text-uppercase g-font-size-11 g-line-height-1 g-theme-color-gray-light-v2 mb-0">Email</h3> 
-                                                <a href="mailto:reception@geopacific.ca" class="g-font-size-11"><strong>reception@municonws.coma</strong></a> 
+                                                <a href="mailto:reception@geopacific.ca" class="g-font-size-11"><strong>reception@geopacific.ca</strong></a> 
                                             </div>                                             
                                             <div class="col-sm-6 g-brd-left g-brd-bottom g-theme-brd-gray-light-v3 g-px-15 g-py-25"> 
                                                 <i class="icon-earphones-alt d-inline-block g-font-size-50 g-color-primary g-mb-30 fa-fax fa"></i> 
                                                 <h3 class="text-uppercase g-font-size-11 g-line-height-1 g-theme-color-gray-light-v2 mb-0">Fax</h3> 
-                                                <a href="fax: +604439-9189" class="g-font-size-11"><strong>(415) 282-4097</strong></a> 
+                                                <a href="fax: +604439-9189" class="g-font-size-11"><strong>604-439-9189</strong></a> 
+                                            </div>                                             
+                                        </div>                                         
+                                        <div class="row mx-0"> 
+                                            <div class="g-brd-left g-brd-bottom g-theme-brd-gray-light-v3 g-px-15 g-py-25 col-sm-12"> 
+                                                <a href="http://www.geopacific.ca/contact" class="g-font-size-11"><strong>Our Squamish, Kamloops and Calgary offices</strong></a> 
                                             </div>                                             
                                         </div>                                         
                                     </div>                                     
@@ -651,7 +890,7 @@ San Francisco, CA 94124</strong></a>
                         <div class="row"> 
                             <div class="col-md-4 col-lg-5 d-flex align-items-center g-mb-20 g-mb-0--md"> 
                                 <p class="w-100 g-font-size-default g-color-white mb-0"> 
-                  &copy; 2018 All right reserved. <a class="g-font-weight-700 g-color-white" href="#!"><strong>Municon West Coast</strong></a> </p> 
+                  &copy; 2018 All right reserved. <a class="g-font-weight-700 g-color-white" href="#!"><strong>Geopacific Consultants Ltd.</strong></a> </p> 
                             </div>                             
                             <div class="col-md-4 col-lg-2 d-flex text-center align-items-center g-mb-20 g-mb-0--md"> 
                                 <p class="w-100 text-uppercase g-font-size-11 g-color-white mb-0">OUR <strong class="d-block g-font-size-22 g-mt-5">EXPERTISE</strong> AND <strong class="d-block g-font-size-22 g-mt-5">EXPERIENCE</strong> MAKE ALL THE DIFFERENCE</p> 
@@ -660,19 +899,19 @@ San Francisco, CA 94124</strong></a>
                                 <div class="w-100"> 
                                     <ul class="list-inline float-lg-right mx-0 mb-0"> 
                                         <li class="list-inline-item g-mr-10--lg"> 
-                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://twitter.com/home?status=GeoPacific%20Consultants%0Ahttp%3A//www.municonws.com/"><i class="fa fa-twitter"></i></a> 
+                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://twitter.com/home?status=GeoPacific%20Consultants%0Ahttp%3A//www.geopacific.ca/"><i class="fa fa-twitter"></i></a> 
                                         </li>                                         
                                         <li class="list-inline-item g-mr-10--lg"> 
-                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.municonws.com/"><i class="fa fa-facebook"></i></a> 
+                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.geopacific.ca/"><i class="fa fa-facebook"></i></a> 
                                         </li>                                         
                                         <li class="list-inline-item g-mr-10--lg"> 
-                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://pinterest.com/pin/create/button/?url=Geopacific%20Consultants&media=http%3A//www.municonws.com/&description="><i class="fa fa-pinterest-p"></i></a> 
+                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://pinterest.com/pin/create/button/?url=Geopacific%20Consultants&media=http%3A//www.geopacific.ca/&description="><i class="fa fa-pinterest-p"></i></a> 
                                         </li>                                         
                                         <li class="list-inline-item g-mr-10--lg"> 
-                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://plus.google.com/share?url=http%3A//www.municonws.com/"><i class="fa fa-google-plus"></i></a> 
+                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://plus.google.com/share?url=http%3A//www.geopacific.ca/"><i class="fa fa-google-plus"></i></a> 
                                         </li>                                         
                                         <li class="list-inline-item"> 
-                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.municonws.com/&title=Municon%20West%20Coasts&summary=&source="><i class="fa fa-linkedin"></i></a> 
+                                            <a class="u-icon-v3 g-width-35 g-height-35 g-font-size-14 g-color-white g-color-primary--hover g-bg-gray-dark-v2 g-bg-white--hover g-transition-0_2 g-transition--ease-in" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//www.geopacific.ca/&title=GeoPacific%20Consultants&summary=&source="><i class="fa fa-linkedin"></i></a> 
                                         </li>                                         
                                     </ul>                                     
                                 </div>                                 
