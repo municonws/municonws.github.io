@@ -6,12 +6,6 @@
  *  Master Slider
  * 	Main css file
  */
-.master-slider {
-    position: relative;
-    visibility: hidden;
-    -moz-transform: translate3d(0 , 0 , 0);
-}
-
 .ms-ie img {
     border: none;
 }
