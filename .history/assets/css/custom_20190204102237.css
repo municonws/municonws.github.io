@@ -350,18 +350,18 @@
 /* slider css */
 
 
-/* Dropdown menu */
+
 .dropbtn {
-    /* background-color: black;
+    background-color: black;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none; */
+    border: none;
 }
  
 .dropdown {
-    /* position: relative; */
-    /* display: inline-block; */
+    position: relative;
+    display: inline-block;
 }
  
 .dropdown-content {
@@ -381,7 +381,5 @@
  
 .dropdown-content a:hover {background-color: white;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: rgba(255,255,255,0);}
+.dropdown:hover .dropbtn {background-color: grey;}
  
-
-/* Dropdown menu */
