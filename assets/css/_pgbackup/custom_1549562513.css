@@ -193,12 +193,13 @@
 
 .master_slider_height {
     /* height:100vh !important; */
-    height: 100vh;
+    height:100vh;
+
 }
 
 .master_slider_bk {
     /* height:100vh !important; */
-    height: 100vh;
+    height:100vh;
     background-size: cover;
     background-position: center;
     background-image: url('../img/slider/slider1.jpg');
@@ -218,61 +219,63 @@
     color: rgba(255, 255, 255, 0.8) !important;
     background-color: rgba(191, 183, 168,  0.9) !important;
   } */
-------------------------------------*/
+
+  ------------------------------------*/
 .custom_bk__info-price {
-    opacity: 0;
+  opacity: 0;
 }
 
 .custom_bk__info-title {
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    width: 100%;
-    margin-bottom: 4.64286rem;
-    -webkit-transform: translate3d(0, 70px, 0);
-    transform: translate3d(0, 70px, 0);
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  margin-bottom: 4.64286rem;
+  -webkit-transform: translate3d(0, 70px, 0);
+          transform: translate3d(0, 70px, 0);
 }
 
 .custom_bk:hover .custom_bk__info {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: rgba(191, 183, 168,  0.9);
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(191, 183, 168,  0.9);
 }
 
 .custom_bk:hover .custom_bk__info-price {
-    opacity: 1;
+  opacity: 1;
 }
 
 .custom_bk:hover .custom_bk__info-list {
-    color: #fff;
+  color: #fff;
 }
 
 .custom_bk:hover .custom_bk__info-list .fa {
-    color: #fff;
+  color: #fff;
 }
 
 .custom_bk:hover .custom_bk__info-title {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 3.21429rem;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  margin-bottom: 3.21429rem;
 }
+
 
 /* slider css */
 .msp-preset-btn-179 {
     background-color: #ffaa30;
     color: #222;
     text-transform: uppercase;
-    border: none !important;
+    border: none !important
 }
 
 .msp-preset-btn-179:hover {
     text-decoration: none;
     color: #222;
-    background-color: #eda237;
+    background-color: #eda237
 }
 
 .msp-preset-btn-179:active {
     text-decoration: none;
-    top: 1px;
+    top: 1px
 }
 
 .msp-preset-btn-179:focus {
@@ -345,6 +348,8 @@
 }
 
 /* slider css */
+
+
 /* Dropdown menu */
 .dropbtn {
     /* background-color: black;
@@ -353,12 +358,12 @@
     font-size: 16px;
     border: none; */
 }
-
+ 
 .dropdown {
     /* position: relative; */
     /* display: inline-block; */
 }
-
+ 
 .dropdown-content {
     display: none;
     position: absolute;
@@ -366,27 +371,17 @@
     min-width: 200px;
     z-index: 1;
 }
-
+ 
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content a:hover {
-    background-color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: rgba(255,255,255,0);
-}
+ 
+.dropdown-content a:hover {background-color: white;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: rgba(255,255,255,0);}
+ 
 
 /* Dropdown menu */
-.services_space_decrease {
-    margin-bottom: 10px !important;
-}
