@@ -1,0 +1,397 @@
+/* Add here all your css styles (customizations) */
+.grid_row_height {
+    height: 506px;
+}
+
+.msp-cn-169-1 {
+    background-color: #ededed;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.msp-cn-169-5 {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.msp-cn-169-6 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-14 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-15 {
+    background-color: #ededed;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.msp-cn-169-19 {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.msp-cn-169-20 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-21 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-22 {
+    background-color: #ededed;
+    font-weight: normal;
+    line-height: normal;
+}
+
+.msp-cn-169-26 {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: normal;
+    white-space: nowrap;
+    color: #333333;
+    text-transform: uppercase;
+}
+
+.msp-cn-169-27 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-28 {
+    background-color: #ffffff;
+    padding-top: 7px;
+    padding-right: 25px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 40px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-29 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: normal;
+    color: #333333;
+}
+
+.msp-cn-169-30 {
+    background-color: #0077B5;
+    font-weight: normal;
+    line-height: normal;
+    white-space: nowrap;
+    border-radius: 100%;
+}
+
+.ms-skin-minimal .ms-time-bar {
+    border-top: none !important;
+}
+
+.slider_height {
+    height: 50vh;
+}
+
+.grid_flexparent {
+    margin: 10px;
+}
+
+.grid_blue_bkg {
+    background-color: #0077B5;
+}
+
+.g-absolute_bottom {
+    position: absolute !important;
+    top: 75% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-backface-visibility: hidden;
+}
+
+.height100p {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_align {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.navbar_logo_size {
+    width: 180px;
+}
+
+.master_slider_height {
+    /* height:100vh !important; */
+    height: 100vh;
+}
+
+.master_slider_bk {
+    /* height:100vh !important; */
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/slider/slider1.jpg');
+}
+
+.master_slider_custom_text_2 {
+    color: white;
+    font-size: 50px;
+}
+
+/* .custom_bk_contaner{
+    background-color: rgba(255, 255, 255, 0) !important;
+
+
+}
+.cutom_bk_color:hover .custom_bk_contaner {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(191, 183, 168,  0.9) !important;
+  } */
+------------------------------------*/
+.custom_bk__info-price {
+    opacity: 0;
+}
+
+.custom_bk__info-title {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    margin-bottom: 4.64286rem;
+    -webkit-transform: translate3d(0, 70px, 0);
+    transform: translate3d(0, 70px, 0);
+}
+
+.custom_bk:hover .custom_bk__info {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(191, 183, 168,  0.9);
+}
+
+.custom_bk:hover .custom_bk__info-price {
+    opacity: 1;
+}
+
+.custom_bk:hover .custom_bk__info-list {
+    color: #fff;
+}
+
+.custom_bk:hover .custom_bk__info-list .fa {
+    color: #fff;
+}
+
+.custom_bk:hover .custom_bk__info-title {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    margin-bottom: 3.21429rem;
+}
+
+/* slider css */
+.msp-preset-btn-179 {
+    background-color: #ffaa30;
+    color: #222;
+    text-transform: uppercase;
+    border: none !important;
+}
+
+.msp-preset-btn-179:hover {
+    text-decoration: none;
+    color: #222;
+    background-color: #eda237;
+}
+
+.msp-preset-btn-179:active {
+    text-decoration: none;
+    top: 1px;
+}
+
+.msp-preset-btn-179:focus {
+    text-decoration: none;
+    color: #222;
+}
+
+.msp-cn-144-2 {
+    background-color: #222222;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
+    opacity: 0.949;
+    box-shadow: 0px 33px 59px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0px 33px 59px 0px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0px 33px 59px 0px rgba(0, 0, 0, 0.6);
+}
+
+.msp-cn-144-3 {
+    background-color: #585858;
+    font-weight: normal;
+    text-align: center;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.msp-cn-144-4 {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 85px;
+    text-align: center;
+    line-height: normal;
+    white-space: nowrap;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.msp-cn-144-5 {
+    font-family: "Raleway";
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    line-height: normal;
+    white-space: nowrap;
+    color: #8a8989;
+    text-transform: uppercase;
+}
+
+.msp-cn-144-6 {
+    padding-top: 15px;
+    padding-right: 70px;
+    padding-bottom: 15px;
+    padding-left: 70px;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.msp-cn-144-7 {
+    font-family: "Playfair Display";
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    line-height: normal;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+/* slider css */
+/* Dropdown menu */
+.dropbtn {
+    /* background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none; */
+}
+
+.dropdown {
+    /* position: relative; */
+    /* display: inline-block; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightgrey;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(255,255,255,0);
+}
+
+/* Dropdown menu */
+.services_space_decrease {
+    margin-bottom: 10px !important;
+}
+
+div.text-uppercase .project_link_onhover:hover {
+    color:#5889B5;
+
+}
