@@ -2773,7 +2773,6 @@ body[class*="u-body--header-side"].u-body--header-side-opened .u-header__overlay
     position: relative;
     transition: .2s ease;
     cursor: pointer;
-    border-radius: 0 !important;
 }
 
 .btn:focus,
