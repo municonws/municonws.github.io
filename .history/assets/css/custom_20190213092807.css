@@ -421,23 +421,3 @@
       -webkit-backface-visibility: hidden;
     }
   }
-
-  .g-absolute-centered--x-custom {
-    position: absolute !important;
-    left: 45% !important;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    -webkit-backface-visibility: hidden;
-  }
-  
-  @media (min-width: 768px) {
-    .g-absolute-centered--x--md-custom {
-      position: absolute !important;
-      left: 45% !important;
-      -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-              transform: translateX(-50%);
-      -webkit-backface-visibility: hidden;
-    }
-  }
