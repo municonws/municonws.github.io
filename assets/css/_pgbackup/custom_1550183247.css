@@ -398,48 +398,46 @@
 .info-v5-3:hover .info-v5-3__info {
     color: rgba(191, 183, 168, 0.8) !important;
     background-color: rgba(191, 183, 168,  0.9);
-}
+}  
+
+
 
 .g-absolute-bottom--y {
     position: absolute !important;
     top: 80% !important;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-backface-visibility: hidden;
-}
-
-@media (min-width: 768px) {
-    .g-absolute-bottom--y--md {
-        position: absolute !important;
-        top: 80% !important;
-        -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-backface-visibility: hidden;
+            transform: translateY(-50%);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .g-absolute-bottom--y--md {
+      position: absolute !important;
+      top: 80% !important;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      -webkit-backface-visibility: hidden;
     }
-}
+  }
 
-.g-absolute-centered--x-custom {
+  .g-absolute-centered--x-custom {
     position: absolute !important;
     left: 45% !important;
     -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-backface-visibility: hidden;
-}
-
-@media (min-width: 768px) {
-    .g-absolute-centered--x--md-custom {
-        position: absolute !important;
-        left: 45% !important;
-        -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        -webkit-backface-visibility: hidden;
+            transform: translateX(-50%);
+    -webkit-backface-visibility: hidden;
+  }
+  
+  @media (min-width: 768px) {
+    .g-absolute-centered--x--md-custom {
+      position: absolute !important;
+      left: 45% !important;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      -webkit-backface-visibility: hidden;
     }
-}
-
-.index_driver_bk_custom_pos {
-    background-position: 50% 10%;
-}
+  }
