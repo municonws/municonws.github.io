@@ -450,16 +450,8 @@
 
 .image_tags_proj_dev {
     display: flex-inline;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
     top: 30px;
     left: 30px;
-}
-
-.btn_proj_dev_2 {
-    margin-top: 29px;
-}
-
-.btn_proj_dev_3 {
-    margin-top: 59px;
 }
