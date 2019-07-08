@@ -50977,7 +50977,7 @@ a:focus {
 /* Main navigation */
 .navbar-nav .nav-item .nav-link:hover,
 .navbar-nav .nav-item.active .nav-link {
-    color: #5889B5 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 /* Colors */
